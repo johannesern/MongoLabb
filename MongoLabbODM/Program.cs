@@ -8,22 +8,11 @@
             IDAO bookDAO;
             
             io= new TextIO();
-            bool connected;
             try
             {
                 bookDAO = new BookDAO(File.ReadAllText($"connection.txt"));
-                connected = true;
-                if(connected)
-                {
-                    var bookController = new BookController(bookDAO, io);
-                    bookController.Menu();
-                }
-                else
-                {
-                    io.Print("Ending program, press any key...");
-                    io.Pause();
-                    io.Exit();
-                }
+                var bookController = new BookController(bookDAO, io);
+                bookController.Menu();
             }
             catch (Exception ex)
             {
