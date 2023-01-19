@@ -1,0 +1,12 @@
+﻿global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using MongoDB.Driver;
+global using MongoDB.Bson;
+global using MongoDB.Bson.Serialization.Attributes;
+global using DataAccess.Interfaces;
+global using DataAccess.Services;
+global using DataAccess.ODMs;
+global using System.Text.RegularExpressions;
